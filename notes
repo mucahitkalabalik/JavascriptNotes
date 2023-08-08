@@ -1,0 +1,13 @@
+create search object Code 
+let dateTitles = ref(['startedBefore', 'startedAfter'])
+  const filterDataKeys = Object.keys(filterData.value)
+  filterDataKeys.forEach(filterKeys => {
+    if (nullCheck(filterData.value[filterKeys])) {
+      dateTitles.value.forEach(date => {
+        if (date === filterKeys) {
+          filterData.value[filterKeys] = new Date(filterData.value[filterKeys]).toISOString()
+        }
+      })
+      data[filterKeys] = filterData.value[filterKeys]
+    }
+  })
