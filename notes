@@ -1,4 +1,5 @@
-create search object Code 
+CREATE SEARCH OBJECT
+
 let dateTitles = ref(['startedBefore', 'startedAfter'])
   const filterDataKeys = Object.keys(filterData.value)
   filterDataKeys.forEach(filterKeys => {
@@ -11,3 +12,41 @@ let dateTitles = ref(['startedBefore', 'startedAfter'])
       data[filterKeys] = filterData.value[filterKeys]
     }
   })
+
+*****************************************************************
+
+DATE FORMAT : 12/07/2023 15:0:00
+
+function dateFormat(date) {
+  var timeStamp = Date.parse(date)
+  var dateFormat = new Date(timeStamp)
+  return (
+    dateFormat.getDate() +
+    '/' +
+    (dateFormat.getMonth() + 1) +
+    '/' +
+    dateFormat.getFullYear() +
+    ' ' +
+    dateFormat.getHours() +
+    ':' +
+    dateFormat.getMinutes() +
+    ':' +
+    dateFormat.getSeconds()
+  )
+}
+
+***************************************************************
+NULL CHECK
+
+function nullCheck(value) {
+  if (
+    value == '' ||
+    value == null ||
+    value == undefined ||
+    (!value && value != 0) ||
+    (!value && typeof value == 'boolean')
+  ) {
+    return false
+  }
+  return true
+}
