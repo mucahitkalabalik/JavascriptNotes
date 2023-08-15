@@ -50,3 +50,8 @@ function nullCheck(value) {
   }
   return true
 }
+
+**************************************************************
+PAGINATİON CALCULATE
+
+ state.pagination = Math.ceil(historyRes.data.total / 20)
