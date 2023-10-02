@@ -55,3 +55,15 @@ function nullCheck(value) {
 PAGINATİON CALCULATE
 
  state.pagination = Math.ceil(historyRes.data.total / 20)
+
+**************************************************************
+PARAMS CREATOR
+
+let params = null
+ for (const [key, value] of Object.entries(data)) {
+      if (params) {
+            params = params + `&${key}=${value}`
+      } else {
+            params = `&${key}=${value}`
+      }
+}
