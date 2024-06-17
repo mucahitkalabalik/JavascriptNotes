@@ -57,6 +57,15 @@ PAGINATİON CALCULATE
  state.pagination = Math.ceil(historyRes.data.total / 20)
 
 **************************************************************
+DYNAMIC LANG KEYS
+const messages = Object.fromEntries(
+  Object.entries(import.meta.glob('./locales/*.json', { eager: true })).map(([key, value]) => [
+    key.slice(10, -5),
+    value.default,
+  ]),
+)
+
+**************************************************************
 PARAMS CREATOR
 
 let params = null
