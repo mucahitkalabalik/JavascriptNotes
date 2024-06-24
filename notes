@@ -1,3 +1,12 @@
+Props with multi-language support specific to a component
+
+import { useI18n } from "vue-i18n";
+const { t } = useI18n();
+
+:title="t('userDetail').toUpperCase()"
+
+***************************************************************
+
 CREATE SEARCH OBJECT
 
 let dateTitles = ref(['startedBefore', 'startedAfter'])
