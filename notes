@@ -4,6 +4,12 @@ import { useI18n } from "vue-i18n";
 const { t } = useI18n();
 
 :title="t('userDetail').toUpperCase()"
+Ï
+***************************************************************
+
+function getImageUrl(country) {
+  return new URL(`../../../assets/flags/${country}.png`, import.meta.url)
+}
 
 ***************************************************************
 
