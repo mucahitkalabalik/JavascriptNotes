@@ -19,7 +19,7 @@ const { t } = useI18n();
 ***************************************************************
 
 function getImageUrl(country) {
-  return new URL(`../../../assets/flags/${country}.png`, import.meta.url)
+  return new URL(`@/assets/flags/${country}.png`, import.meta.url)
 }
 
 ***************************************************************
