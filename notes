@@ -1,3 +1,14 @@
+function goTo(page) {
+  const routeData = router.resolve({
+    name: 'Kullanıcı',
+    params: { id: props.selected ? props.selected : user.value.id },
+    query: { type: page },
+  })
+  window.open(routeData.href, '_blank')
+}
+
+***************************************************************
+
 Props with multi-language support specific to a component
 
 import { useI18n } from "vue-i18n";
