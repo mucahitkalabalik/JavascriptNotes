@@ -134,21 +134,15 @@ let params = null
       }
 }
 
-// İki tarih arasındaki süreyi hesaplayan fonksiyon
 let firstTime = (dateStart, dateCreated) => {
-  // Seçili tarih verisini sıfırlar
   selectedHistory.value = null
 
-  // İlk tarih nesnesini oluşturur (el başlama zamanı)
   const date1 = new Date(dateStart)
 
-  // İkinci tarih nesnesini oluşturur (işlem yaratılma zamanı)
   const date2 = new Date(dateCreated)
 
-  // İki tarih arasındaki farkı hesaplar (milisaniye cinsinden)
   let timeDifference = date2.getTime() - date1.getTime()
 
-  // Farkı saniye cinsine çevirir
   var seconds = new Date(timeDifference).getTime() / 1000
 
   // Hesaplanan süreyi döndürür
