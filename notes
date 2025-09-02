@@ -29,6 +29,7 @@ function exportItem() {
 ***************************************************************
 
 function goTo(page) {
+
   const routeData = router.resolve({
     name: 'Kullanıcı',
     params: { id: props.selected ? props.selected : user.value.id },
