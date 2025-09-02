@@ -36,6 +36,7 @@ function goTo(page) {
     query: { type: page },
   })
   window.open(routeData.href, '_blank')
+
 }
 
 ***************************************************************
