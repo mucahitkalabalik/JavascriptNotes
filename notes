@@ -145,7 +145,6 @@ let firstTime = (dateStart, dateCreated) => {
 
   var seconds = new Date(timeDifference).getTime() / 1000
 
-  // Hesaplanan süreyi döndürür
   return seconds
 }
 
